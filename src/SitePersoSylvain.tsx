@@ -3,6 +3,18 @@ import React, { useMemo, useState } from "react";
 
 const messages = {
   fr: {
+    bioTitle: "Biographie complète",
+    bioParas: [
+        "Sylvain Tremblay évolue depuis plus de 30 ans à l’interface entre la stratégie d’affaires et l’ingénierie logicielle. Bilingue FR/EN, il a bâti sa réputation sur des livrables simples, mesurables et sécuritaires — avec une obsession pour l’expérience utilisateur et la maintenabilité.",
+          "Chez Intuit, il a contribué à des produits à large échelle (Quicken, QuickBooks, ImpôtRapide/TurboTax Online), ce qui lui a donné une rigueur produit (télémétrie, performance, sécurité) et une sensibilité forte pour la simplification des parcours clients.",
+          "En 2007, il fonde Global‑Lan (hébergement et services Web) qu’il dirige jusqu’en 2022. Il y structure des pratiques d’exploitation (SLA, surveillance, sauvegardes, reprise) et met en place des automatisations qui réduisent les coûts récurrents.",
+          "Entre 2020 et 2025, il cofonde 55+ YOGA, une plateforme de cours en ligne. Il y pilote la conception UX, la diffusion vidéo, l’abonnement, l’automatisation marketing et la conformité. L’initiative lui apporte une vision terrain des modèles d’affaires numériques et de la relation client.",
+          "Depuis, il exerce comme vCIO / architecte fractionnaire : audit éclair, feuille de route, architecture et migration cloud (AWS/Azure/GCP), sécurité et conformité (ISO 27001, Loi 25, RGPD), modernisation applicative et intégration d’IA appliquée (assistants, automatisation documentaire, génération de contenu, analytics).",
+          "Publications : « L’IA en action : Stratégies concrètes pour la croissance des PME » (FR) et « AI in Action: Real‑World Strategies for Small Business Growth » (EN). Il édite aussi une collection de livres de mots cachés thématiques avec lexique, où il applique ses principes de clarté, structure et progression.",
+          "Approche : partir des objectifs d’affaires, cadrer la valeur (KPI), choisir l’architecture minimale viable, sécuriser les données (privacy by design), documenter juste‑ce‑qu’il‑faut et transférer la compétence aux équipes. Favorise l’itération courte et la gouvernance légère.",
+          "Domaines de prédilection : architecture logicielle, plateformes cloud, automatisation/IA appliquée, conformité et protection des données, expérience client et analytics produit. Langages/outillage au fil des ans : C/C++, Java, Go, Python, JavaScript/TypeScript, écosystèmes Web et CI/CD.",
+          "Aujourd’hui, il accompagne des PME et OBNL en croissance, ainsi que des auteurs‑éditeurs, pour rendre leurs systèmes plus simples, plus sûrs et plus rentables — sans sur‑ingénierie."
+      ],
     nav: { about: "Parcours", books: "Livres", projects: "Projets", photos: "Photos", contact: "Contact" },
     heroTitle: "vCIO & Architecte logiciel · Auteur-éditeur numérique",
     heroBody:
@@ -12,9 +24,9 @@ const messages = {
     available: "Disponible pour mandats fractionnaires",
     aboutTitle: "Parcours",
     aboutP1:
-      "Bilingue FR/EN, j’accompagne les PME et organisations comme vCIO / architecte fractionnaire et auteur‑éditeur numérique. J’ai contribué à des produits majeurs chez Intuit (Quicken, QuickBooks, TurboTax/ImpôtRapide Online), fondé Global‑Lan (hébergement Web, 2007–2022) et cofondé 55+ YOGA (plateforme de cours en ligne, 2020–2025).",
+      "J’aide les dirigeants de PME et organisations à prendre des décisions technologiques claires et mesurables : feuille de route numérique, architecture logicielle, migration cloud, sécurité et conformité (Loi 25, RGPD), et intégration pragmatique de l’IA.",
     aboutP2:
-      "Mes domaines de prédilection : cloud (AWS/Azure/GCP), sécurité (ISO 27001, Loi 25, RGPD), data & IA appliquée, modernisation applicative et automatisation pragmatique.",
+      "Mon approche est simple : livrer vite une valeur visible (audit éclair → plan d’action priorisé), puis itérer avec des indicateurs concrets. J’interviens en mode fractionnaire (vCIO/architecte), aux côtés des équipes internes et partenaires.",
     booksTitle: "Livres",
     booksIntro: "Guides IA (EN/FR) et livres de casse‑têtes — miniatures optimisées.",
     viewOnAmazon: "Voir sur Amazon",
@@ -29,6 +41,18 @@ const messages = {
     langToggle: "EN",
   },
   en: {
+    bioTitle: "Full Biography",
+    bioParas: [
+        "Sylvain Tremblay has 30+ years at the intersection of business strategy and software engineering. A bilingual professional (FR/EN), he is known for simple, measurable, and secure deliverables — with a strong focus on user experience and maintainability.",
+          "At Intuit, he contributed to large‑scale products (Quicken, QuickBooks, TurboTax/ImpôtRapide Online), gaining product rigor (telemetry, performance, security) and a sharp sense for simplifying customer journeys.",
+          "In 2007 he founded Global‑Lan (web hosting & services), which he ran until 2022. He established operating practices (SLA, monitoring, backups, recovery) and built automations that reduced recurring costs.",
+          "From 2020 to 2025, he co‑founded 55+ YOGA, an online class platform. He led UX, video delivery, subscriptions, marketing automation, and compliance — acquiring hands‑on insight into digital business models and customer relationships.",
+          "He now works as a fractional vCIO / software architect: rapid assessments, roadmaps, software architecture and cloud migration (AWS/Azure/GCP), security and compliance (ISO 27001, Law 25, GDPR), app modernization, and applied AI (assistants, document automation, content generation, analytics).",
+          "Publications: “AI in Action: Real‑World Strategies for Small Business Growth” (EN) and “L’IA en action : Stratégies concrètes pour la croissance des PME” (FR). He also publishes a themed word‑search puzzle series with lexicons, applying principles of clarity, structure, and progression.",
+          "Working style: start from business outcomes, define value (KPIs), select the minimal viable architecture, secure data (privacy by design), document just‑enough, and transfer capabilities to teams. Prefers short iterations and lightweight governance.",
+          "Focus areas: software architecture, cloud platforms, applied AI/automation, compliance & data protection, customer experience and product analytics. Tooling over the years includes C/C++, Java, Go, Python, JavaScript/TypeScript, modern Web ecosystems and CI/CD.",
+          "Today he helps growing SMEs, nonprofits, and indie publishers make their systems simpler, safer, and more profitable — without over‑engineering."
+      ],
     nav: { about: "About", books: "Books", projects: "Projects", photos: "Photos", contact: "Contact" },
     heroTitle: "vCIO & Software Architect · Author-Publisher",
     heroBody:
@@ -38,9 +62,9 @@ const messages = {
     available: "Available for fractional engagements",
     aboutTitle: "About",
     aboutP1:
-      "Bilingual FR/EN, I help SMEs and organizations as a fractional vCIO/architect and author‑publisher. I contributed to major Intuit products (Quicken, QuickBooks, TurboTax), founded Global‑Lan (web hosting, 2007–2022) and co‑founded 55+ YOGA (online classes, 2020–2025).",
+      "I help SME leaders and organizations make clear, measurable technology decisions: digital roadmap, software architecture, cloud migration, security & compliance (Law 25, GDPR), and pragmatic AI integration.",
     aboutP2:
-      "Focus areas: cloud (AWS/Azure/GCP), security (ISO 27001, Law 25, GDPR), applied data & AI, app modernization and pragmatic automation.",
+      "My approach is straightforward: deliver visible value fast (rapid assessment → prioritized plan), then iterate with concrete KPIs. I operate in a fractional vCIO/architect role, alongside internal teams and partners.",
     booksTitle: "Books",
     booksIntro: "AI guides (EN/FR) and puzzle books — optimized thumbnails.",
     viewOnAmazon: "View on Amazon",
@@ -58,17 +82,66 @@ const messages = {
 
 type Lang = keyof typeof messages;
 
-function amazonLink(asin: string) {
-  const lang = typeof navigator !== "undefined" ? navigator.language : "en-CA";
-  const lower = lang.toLowerCase();
-  if (lower.includes("fr")) return `https://www.amazon.fr/dp/${asin}`;
-  if (lower.includes("ca")) return `https://www.amazon.ca/dp/${asin}`;
-  if (lower.includes("us") || lower.includes("en")) return `https://www.amazon.com/dp/${asin}`;
-  if (lower.includes("uk") || lower.includes("gb")) return `https://www.amazon.co.uk/dp/${asin}`;
-  if (lower.includes("de")) return `https://www.amazon.de/dp/${asin}`;
-  if (lower.includes("es")) return `https://www.amazon.es/dp/${asin}`;
-  if (lower.includes("it")) return `https://www.amazon.it/dp/${asin}`;
-  return `https://www.amazon.com/dp/${asin}`;
+type MarketCode =
+  | "US" | "CA" | "UK" | "GB" | "FR" | "DE" | "ES" | "IT"
+  | "AU" | "MX" | "BR" | "JP" | "IN" | "NL";
+
+const MARKET_DOMAIN: Record<MarketCode, string> = {
+  US: "amazon.com",
+  CA: "amazon.ca",
+  UK: "amazon.co.uk", // alias GB
+  GB: "amazon.co.uk",
+  FR: "amazon.fr",
+  DE: "amazon.de",
+  ES: "amazon.es",
+  IT: "amazon.it",
+  AU: "amazon.com.au",
+  MX: "amazon.com.mx",
+  BR: "amazon.com.br",
+  JP: "amazon.co.jp",
+  IN: "amazon.in",
+  NL: "amazon.nl",
+};
+
+function amazonLink(
+  asin: string,
+  opts?: { market?: MarketCode }
+) {
+  if (opts?.market) {
+    const domain = MARKET_DOMAIN[opts.market];
+    if (domain) return `https://${domain}/dp/${asin}`;
+  }
+
+  const locale =
+    (typeof navigator !== "undefined" && (navigator.languages?.[0] || navigator.language)) ||
+    "en-US";
+  const lc = locale.toLowerCase();
+
+  // Vérifie d’abord les régions explicites (fr-CA, en-CA, etc.)
+  const region = lc.split("-")[1]?.toUpperCase() as MarketCode | undefined;
+  if (region && MARKET_DOMAIN[region]) {
+    return `https://${MARKET_DOMAIN[region]}/dp/${asin}`;
+  }
+
+  // Priorité: CA avant FR
+  if (lc.includes("ca")) return `https://${MARKET_DOMAIN.CA}/dp/${asin}`;
+  if (lc.includes("fr")) return `https://${MARKET_DOMAIN.FR}/dp/${asin}`;
+
+  // Autres langues/régions
+  if (lc.includes("us")) return `https://${MARKET_DOMAIN.US}/dp/${asin}`;
+  if (lc.includes("uk") || lc.includes("gb")) return `https://${MARKET_DOMAIN.UK}/dp/${asin}`;
+  if (lc.startsWith("de")) return `https://${MARKET_DOMAIN.DE}/dp/${asin}`;
+  if (lc.startsWith("es")) return `https://${MARKET_DOMAIN.ES}/dp/${asin}`;
+  if (lc.startsWith("it")) return `https://${MARKET_DOMAIN.IT}/dp/${asin}`;
+  if (lc.startsWith("ja")) return `https://${MARKET_DOMAIN.JP}/dp/${asin}`;
+  if (lc.startsWith("nl")) return `https://${MARKET_DOMAIN.NL}/dp/${asin}`;
+  if (lc.startsWith("hi") || lc.includes("in")) return `https://${MARKET_DOMAIN.IN}/dp/${asin}`;
+  if (lc.startsWith("pt") || lc.includes("br")) return `https://${MARKET_DOMAIN.BR}/dp/${asin}`;
+  if (lc.includes("mx")) return `https://${MARKET_DOMAIN.MX}/dp/${asin}`;
+  if (lc.includes("au")) return `https://${MARKET_DOMAIN.AU}/dp/${asin}`;
+
+  // défaut
+  return `https://${MARKET_DOMAIN.US}/dp/${asin}`;
 }
 
 // Use a higher-res cover and display it smaller for sharpness
@@ -96,7 +169,9 @@ const puzzleBooks = [
   { title: "Mots cachés — Camping & plein air (avec lexique)", asin: "B0FN7RF28R", lang: "FR" },
   { title: "Mots cachés — Géographie du monde", asin: "B0FN4X1HNL", lang: "FR" },
   { title: "Mots cachés — Animaux", asin: "B0FN4V48DC", lang: "FR" },
-  { title: "Mots cachés — Cuisine & gastronomie (avec lexique)", asin: "B0FN4QZBQ9", lang: "FR" },
+  { title: "Mots cachés — Cuisine & gastronomie", asin: "B0FN4QZBQ9", lang: "FR" },
+  { title: "Mots cachés — Automne", asin: "B0FPMN1SXK", lang: "FR" },
+  { title: "Mots cachés — Halloween", asin: "B0FQ3MBVJH", lang: "FR" },
 ];
 
 export default function SitePersoSylvain() {
@@ -108,6 +183,7 @@ export default function SitePersoSylvain() {
       <Hero t={t} />
       <main className="mx-auto max-w-6xl px-4 sm:px-6">
         <About t={t} />
+        <Biography t={t} />
         <Books t={t} />
         <Gallery t={t} />
         <Contact t={t} />
@@ -129,6 +205,7 @@ function Header({ t, onToggle }: any) {
         </div>
         <nav className="hidden sm:flex items-center gap-6 text-sm text-neutral-300">
           <a href="#about" className="hover:text-white">{t.nav.about}</a>
+          <a href="#bio" className="hover:text-white">{t.bioTitle}</a>
           <a href="#books" className="hover:text-white">{t.nav.books}</a>
           <a href="#gallery" className="hover:text-white">{t.nav.photos}</a>
           <a href="#contact" className="hover:text-white">{t.nav.contact}</a>
@@ -172,15 +249,28 @@ function Hero({ t }: any) {
 
 function About({ t }: any) {
   return (
-    <section id="about" className="py-16 sm:py-24">
-      <div className="grid md:grid-cols-5 gap-10">
-        <div className="md:col-span-2">
-          <h2 className="text-2xl sm:text-3xl font-bold">{t.aboutTitle}</h2>
-          <p className="mt-4 text-neutral-300">{t.aboutP1}</p>
-          <p className="mt-4 text-neutral-300">{t.aboutP2}</p>
-        </div>
-      </div>
-    </section>
+          <section id="about" className="py-16 sm:py-24">
+            <div className="px-4 sm:px-6 max-w-4xl">
+              <h2 className="text-2xl sm:text-3xl font-bold">{t.aboutTitle}</h2>
+              <p className="mt-4 text-neutral-300">{t.aboutP1}</p>
+              <p className="mt-4 text-neutral-300">{t.aboutP2}</p>
+            </div>
+          </section>
+  );
+}
+
+function Biography({ t }: any) {
+  return (
+          <section id="bio" className="py-16 sm:py-24 border-t border-neutral-800">
+            <div className="px-4 sm:px-6 max-w-4xl">
+              <h2 className="text-2xl sm:text-3xl font-bold">{t.bioTitle}</h2>
+              <div className="mt-4 grid gap-4 text-neutral-300">
+                {t.bioParas?.map((p: string, i: number) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+            </div>
+          </section>
   );
 }
 
