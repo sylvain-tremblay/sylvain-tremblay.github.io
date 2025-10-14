@@ -167,7 +167,7 @@ const aiBooks = [
 const puzzleBooks = [
   { title: "Mots cachés — Été", asin: "B0FNL9WY4N", lang: "FR" },
   { title: "Mots cachés — Camping & plein air", asin: "B0FN7RF28R", lang: "FR" },
-  { title: "Mots cachés — Animaux", asin: "B0FN4X1HNL", lang: "FR" },
+  { title: "Mots cachés — Animaux", asin: "B0FN4QZBQ9", lang: "FR" },
   { title: "Mots cachés — Géographie", asin: "B0FN4V48DC", lang: "FR" },
   { title: "Mots cachés — Culinaire", asin: "B0FN4X1HNL", lang: "FR" },
   { title: "Mots cachés — Automne", asin: "B0FPMN1SXK", lang: "FR" },
