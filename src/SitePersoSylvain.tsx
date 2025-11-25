@@ -172,6 +172,7 @@ const puzzleBooks = [
   { title: "Mots cachés — Culinaire", asin: "B0FN4X1HNL", lang: "FR" },
   { title: "Mots cachés — Automne", asin: "B0FPMN1SXK", lang: "FR" },
   { title: "Mots cachés — Halloween", asin: "B0FQ3MBVJH", lang: "FR" },
+  { title: "Mots cachés — Noël", asin: "B0G3P9YHZ4", lang: "FR" },
 ];
 
 export default function SitePersoSylvain() {
