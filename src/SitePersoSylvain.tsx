@@ -5,16 +5,16 @@ const messages = {
   fr: {
     bioTitle: "Biographie complète",
     bioParas: [
-        "Sylvain Tremblay évolue depuis plus de 30 ans à l’interface entre la stratégie d’affaires et l’ingénierie logicielle. Bilingue FR/EN, il a bâti sa réputation sur des livrables simples, mesurables et sécuritaires — avec une obsession pour l’expérience utilisateur et la maintenabilité.",
-          "Chez Intuit, il a contribué à des produits à large échelle (Quicken, QuickBooks, ImpôtRapide/TurboTax Online), ce qui lui a donné une rigueur produit (télémétrie, performance, sécurité) et une sensibilité forte pour la simplification des parcours clients.",
-          "En 2007, il fonde Global‑Lan (hébergement et services Web) qu’il dirige jusqu’en 2022. Il y structure des pratiques d’exploitation (SLA, surveillance, sauvegardes, reprise) et met en place des automatisations qui réduisent les coûts récurrents.",
-          "Entre 2020 et 2025, il cofonde 55+ YOGA, une plateforme de cours en ligne. Il y pilote la conception UX, la diffusion vidéo, l’abonnement, l’automatisation marketing et la conformité. L’initiative lui apporte une vision terrain des modèles d’affaires numériques et de la relation client.",
-          "Depuis, il exerce comme vCIO / architecte fractionnaire : audit éclair, feuille de route, architecture et migration cloud (AWS/Azure/GCP), sécurité et conformité (ISO 27001, Loi 25, RGPD), modernisation applicative et intégration d’IA appliquée (assistants, automatisation documentaire, génération de contenu, analytics).",
-          "Publications : « L’IA en action : Stratégies concrètes pour la croissance des PME » (FR) et « AI in Action: Real‑World Strategies for Small Business Growth » (EN). Il édite aussi une collection de livres de mots cachés thématiques avec lexique, où il applique ses principes de clarté, structure et progression.",
-          "Approche : partir des objectifs d’affaires, cadrer la valeur (KPI), choisir l’architecture minimale viable, sécuriser les données (privacy by design), documenter juste‑ce‑qu’il‑faut et transférer la compétence aux équipes. Favorise l’itération courte et la gouvernance légère.",
-          "Domaines de prédilection : architecture logicielle, plateformes cloud, automatisation/IA appliquée, conformité et protection des données, expérience client et analytics produit. Langages/outillage au fil des ans : C/C++, Java, Go, Python, JavaScript/TypeScript, écosystèmes Web et CI/CD.",
-          "Aujourd’hui, il accompagne des PME et OBNL en croissance, ainsi que des auteurs‑éditeurs, pour rendre leurs systèmes plus simples, plus sûrs et plus rentables — sans sur‑ingénierie."
-      ],
+      "Sylvain Tremblay œuvre depuis plus de 30 ans à l’intersection de la stratégie d’affaires, de l’architecture logicielle et de la transformation numérique. Bilingue français-anglais, il a bâti sa carrière sur une conviction simple : la technologie n’a de valeur que lorsqu’elle rend une organisation plus claire, plus sûre et plus capable d’agir.",
+      "Il acquiert une solide rigueur produit chez Intuit, où il contribue à des solutions utilisées à grande échelle — Quicken, QuickBooks et ImpôtRapide/TurboTax Online. Cette expérience ancre chez lui une pratique exigeante de la performance, de la sécurité, de la télémétrie et de la simplification des parcours clients.",
+      "En 2007, il fonde Global‑Lan, entreprise d’hébergement et de services Web qu’il dirige jusqu’en 2022. Il y met en place des pratiques d’exploitation durables : niveaux de service, surveillance, sauvegardes, reprise après sinistre et automatisations conçues pour réduire les coûts récurrents sans sacrifier la fiabilité.",
+      "En 2020, il cofonde 55+ YOGA, une plateforme de cours en ligne. Il y pilote la conception UX, la diffusion vidéo, l’abonnement, l’automatisation marketing et la conformité — une expérience qui affine sa compréhension concrète des modèles d’affaires numériques et de la relation client.",
+      "Aujourd’hui, Sylvain accompagne des PME, des OBNL et des équipes dirigeantes comme vCIO et architecte logiciel fractionnaire. Il intervient là où les décisions technologiques doivent être à la fois ambitieuses et pragmatiques : feuille de route, architecture, modernisation applicative, migration cloud (AWS, Azure, GCP), cybersécurité, conformité (ISO 27001, Loi 25, RGPD) et intégration responsable de l’IA.",
+      "Son approche est orientée vers l’impact : partir des objectifs d’affaires, clarifier la valeur attendue, choisir l’architecture minimale viable, sécuriser les données dès la conception, documenter juste ce qu’il faut et faire progresser les équipes par itérations courtes. Ses domaines de prédilection couvrent l’architecture logicielle, le cloud, l’automatisation, l’IA appliquée, la protection des données, l’expérience client et l’analytique produit.",
+      "En 2026, il crée sa propre maison d’édition afin de donner une continuité éditoriale à son travail. Elle porte des ouvrages ancrés dans la pratique, la clarté et l’autonomie des lecteurs — qu’il s’agisse de technologie, de création ou de livres illustrés.",
+      "Sa série sur l’intelligence artificielle pour les petites entreprises comprend L’IA en action : Stratégies concrètes pour la croissance des PME et sa version anglaise AI in Action: Real‑World Strategies for Small Business Growth, ainsi que L’écart, c’est vous. — Décider, construire, vérifier et durer avec l’IA. Deux titres sont à paraître : Personne n’a décidé ça. — Décider, répondre, assumer : ce que l’IA remet entre vos mains, consacré à la responsabilité et à l’éthique; et Les mains dans l’IA — Écrire, vérifier, automatiser : le guide pratique pour les petites entreprises, consacré au geste, aux outils et aux pratiques concrètes.",
+      "Il publie également deux livres illustrés et une collection de livres de casse‑têtes thématiques. À travers l’ensemble de ses projets, Sylvain Tremblay poursuit le même objectif : transformer des sujets complexes en décisions, systèmes et œuvres utiles — solides dans leur conception, accessibles dans leur forme et durables dans leurs effets."
+    ],
     nav: { about: "Parcours", books: "Livres", projects: "Projets", contact: "Contact" },
     heroTitle: "vCIO & Architecte logiciel · Auteur-éditeur numérique",
     heroBody:
@@ -42,16 +42,16 @@ const messages = {
   en: {
     bioTitle: "Full Biography",
     bioParas: [
-        "Sylvain Tremblay has 30+ years at the intersection of business strategy and software engineering. A bilingual professional (FR/EN), he is known for simple, measurable, and secure deliverables — with a strong focus on user experience and maintainability.",
-          "At Intuit, he contributed to large‑scale products (Quicken, QuickBooks, TurboTax/ImpôtRapide Online), gaining product rigor (telemetry, performance, security) and a sharp sense for simplifying customer journeys.",
-          "In 2007 he founded Global‑Lan (web hosting & services), which he ran until 2022. He established operating practices (SLA, monitoring, backups, recovery) and built automations that reduced recurring costs.",
-          "From 2020 to 2025, he co‑founded 55+ YOGA, an online class platform. He led UX, video delivery, subscriptions, marketing automation, and compliance — acquiring hands‑on insight into digital business models and customer relationships.",
-          "He now works as a fractional vCIO / software architect: rapid assessments, roadmaps, software architecture and cloud migration (AWS/Azure/GCP), security and compliance (ISO 27001, Law 25, GDPR), app modernization, and applied AI (assistants, document automation, content generation, analytics).",
-          "Publications: “AI in Action: Real‑World Strategies for Small Business Growth” (EN) and “L’IA en action : Stratégies concrètes pour la croissance des PME” (FR). He also publishes a themed word‑search puzzle series with lexicons, applying principles of clarity, structure, and progression.",
-          "Working style: start from business outcomes, define value (KPIs), select the minimal viable architecture, secure data (privacy by design), document just‑enough, and transfer capabilities to teams. Prefers short iterations and lightweight governance.",
-          "Focus areas: software architecture, cloud platforms, applied AI/automation, compliance & data protection, customer experience and product analytics. Tooling over the years includes C/C++, Java, Go, Python, JavaScript/TypeScript, modern Web ecosystems and CI/CD.",
-          "Today he helps growing SMEs, nonprofits, and indie publishers make their systems simpler, safer, and more profitable — without over‑engineering."
-      ],
+      "Sylvain Tremblay has spent more than 30 years at the intersection of business strategy, software architecture, and digital transformation. Bilingual in French and English, he has built his career on a simple conviction: technology matters only when it makes an organization clearer, safer, and more capable of acting.",
+      "He developed strong product discipline at Intuit, contributing to widely used solutions including Quicken, QuickBooks, and TurboTax/ImpôtRapide Online. That experience grounded his practice in performance, security, telemetry, and the simplification of customer journeys.",
+      "In 2007, he founded Global‑Lan, a web hosting and services company he led until 2022. There, he established durable operating practices: service levels, monitoring, backups, disaster recovery, and automations designed to reduce recurring costs without compromising reliability.",
+      "In 2020, he co-founded 55+ YOGA, an online course platform. He led UX, video delivery, subscriptions, marketing automation, and compliance — experience that deepened his hands-on understanding of digital business models and customer relationships.",
+      "Today, Sylvain advises SMEs, nonprofits, and leadership teams as a fractional vCIO and software architect. He works where technology decisions need to be both ambitious and pragmatic: roadmaps, architecture, application modernization, cloud migration (AWS, Azure, GCP), cybersecurity, compliance (ISO 27001, Quebec Law 25, GDPR), and responsible AI integration.",
+      "His approach is impact-driven: start with business outcomes, clarify the expected value, choose the minimum viable architecture, secure data by design, document just enough, and build team capability through short iterations. His focus spans software architecture, cloud, automation, applied AI, data protection, customer experience, and product analytics.",
+      "In 2026, he created his own publishing house to give his editorial work a lasting home. It carries books grounded in practice, clarity, and reader autonomy — across technology, creative work, and illustrated books.",
+      "His AI series for small businesses includes L’IA en action: Stratégies concrètes pour la croissance des PME and its English edition, AI in Action: Real‑World Strategies for Small Business Growth, along with The gap is you. — Decide, build, verify, and last with AI. Two books are forthcoming: Nobody made that decision. — Decide, respond, take responsibility: what AI puts back in your hands, on responsibility and ethics; and Hands on AI — Write, verify, automate: the practical guide for small businesses, focused on real tools and practical work.",
+      "He also publishes two illustrated books and a collection of themed word-search puzzle books. Across all his work, Sylvain Tremblay pursues the same aim: turn complex subjects into useful decisions, systems, and works — sound in design, accessible in form, and durable in effect."
+    ],
     nav: { about: "About", books: "Books", projects: "Projects", contact: "Contact" },
     heroTitle: "vCIO & Software Architect · Author-Publisher",
     heroBody:
@@ -258,7 +258,7 @@ function Biography({ t }: any) {
           <section id="bio" className="py-16 sm:py-24 border-t border-neutral-800">
             <div className="px-4 sm:px-6 max-w-4xl">
               <h2 className="text-2xl sm:text-3xl font-bold">{t.bioTitle}</h2>
-              <div className="mt-4 grid gap-4 text-neutral-300">
+              <div className="mt-6 grid gap-6 text-neutral-300">
                 {t.bioParas?.map((p: string, i: number) => (
                   <p key={i}>{p}</p>
                 ))}
