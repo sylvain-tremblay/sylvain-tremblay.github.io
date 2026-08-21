@@ -151,7 +151,7 @@ function coverUrl(asin: string) {
 const aiBooks = [
   { title: "AI in Action: Real-World Strategies for Small Business Growth", asin: "B0FLB9KK8S", lang: "EN" },
   { title: "L’IA en action : Stratégies concrètes pour la croissance des PME", asin: "B0FLF2NHRM", lang: "FR" },
-  { title: "Livre sur l’IA — B0HFWV11BX", asin: "B0HFWV11BX", lang: "FR" },
+  { title: "L’écart, c’est vous. — Décider, construire, vérifier et durer avec l’IA", asin: "B0HFWV11BX", lang: "FR" },
 ];
 
 const puzzleBooks = [
