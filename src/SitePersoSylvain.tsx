@@ -32,6 +32,7 @@ const messages = {
     viewOnAmazon: "Voir sur Amazon",
     aiGuides: "Guides sur l’IA",
     puzzleBooks: "Livres de casse‑têtes",
+    illustratedBooks: "Livres illustrés",
     projectsTitle: "Projets",
     contactTitle: "Contact",
     contactLead: "Pour collaborations, mandats fractionnaires ou médias.",
@@ -68,6 +69,7 @@ const messages = {
     viewOnAmazon: "View on Amazon",
     aiGuides: "AI Guides",
     puzzleBooks: "Puzzle Books",
+    illustratedBooks: "Illustrated Books",
     projectsTitle: "Projects",
     contactTitle: "Contact",
     contactLead: "For collaborations, fractional work or media.",
@@ -160,6 +162,11 @@ const puzzleBooks = [
   { title: "Mots cachés — Automne", asin: "B0FPMN1SXK", lang: "FR" },
   { title: "Mots cachés — Halloween", asin: "B0FQ3MBVJH", lang: "FR" },
   { title: "Mots cachés — Noël", asin: "B0G3P9YHZ4", lang: "FR" },
+];
+
+const illustratedBooks = [
+  { title: "Livre illustré — B0G442LCSZ", asin: "B0G442LCSZ", lang: "FR" },
+  { title: "Livre illustré — B0G4DM1DGT", asin: "B0G4DM1DGT", lang: "FR" },
 ];
 
 export default function SitePersoSylvain() {
@@ -300,6 +307,11 @@ function Books({ t }: any) {
       <h3 className="mt-10 mb-3 text-lg font-semibold">{t.puzzleBooks}</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {puzzleBooks.map((b) => <BookCard key={b.asin} book={b} t={t} />)}
+      </div>
+
+      <h3 className="mt-10 mb-3 text-lg font-semibold">{t.illustratedBooks}</h3>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {illustratedBooks.map((b) => <BookCard key={b.asin} book={b} t={t} />)}
       </div>
     </section>
   );
