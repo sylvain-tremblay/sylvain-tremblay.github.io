@@ -30,7 +30,7 @@ const messages = {
     booksTitle: "Livres",
     booksIntro: "Guides IA (EN/FR) et livres de casse‑têtes — miniatures optimisées.",
     viewOnAmazon: "Voir sur Amazon",
-    aiGuides: "Guides sur l’IA",
+    aiGuides: "Livres sur l’IA",
     puzzleBooks: "Livres de casse‑têtes",
     illustratedBooks: "Livres illustrés",
     projectsTitle: "Projets",
@@ -67,7 +67,7 @@ const messages = {
     booksTitle: "Books",
     booksIntro: "AI guides (EN/FR) and puzzle books — optimized thumbnails.",
     viewOnAmazon: "View on Amazon",
-    aiGuides: "AI Guides",
+    aiGuides: "AI Books",
     puzzleBooks: "Puzzle Books",
     illustratedBooks: "Illustrated Books",
     projectsTitle: "Projects",
@@ -151,6 +151,7 @@ function coverUrl(asin: string) {
 const aiBooks = [
   { title: "AI in Action: Real-World Strategies for Small Business Growth", asin: "B0FLB9KK8S", lang: "EN" },
   { title: "L’IA en action : Stratégies concrètes pour la croissance des PME", asin: "B0FLF2NHRM", lang: "FR" },
+  { title: "Livre sur l’IA — B0HFWV11BX", asin: "B0HFWV11BX", lang: "FR" },
 ];
 
 const puzzleBooks = [
