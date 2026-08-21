@@ -15,7 +15,7 @@ const messages = {
           "Domaines de prédilection : architecture logicielle, plateformes cloud, automatisation/IA appliquée, conformité et protection des données, expérience client et analytics produit. Langages/outillage au fil des ans : C/C++, Java, Go, Python, JavaScript/TypeScript, écosystèmes Web et CI/CD.",
           "Aujourd’hui, il accompagne des PME et OBNL en croissance, ainsi que des auteurs‑éditeurs, pour rendre leurs systèmes plus simples, plus sûrs et plus rentables — sans sur‑ingénierie."
       ],
-    nav: { about: "Parcours", books: "Livres", projects: "Projets", photos: "Photos", contact: "Contact" },
+    nav: { about: "Parcours", books: "Livres", projects: "Projets", contact: "Contact" },
     heroTitle: "vCIO & Architecte logiciel · Auteur-éditeur numérique",
     heroBody:
       "30+ ans d’expérience en TI : direction technologique, architecture, transformation numérique, cloud (AWS/Azure/GCP), cybersécurité et conformité (ISO 27001, Loi 25, RGPD). Ancien d’Intuit (Quicken, QuickBooks, TurboTax), fondateur de Global‑Lan, cofondateur de 55+ YOGA.",
@@ -33,8 +33,6 @@ const messages = {
     aiGuides: "Guides sur l’IA",
     puzzleBooks: "Livres de casse‑têtes",
     projectsTitle: "Projets",
-    photosTitle: "Photos",
-    photosHint: "Sélection de photos personnelles et professionnelles.",
     contactTitle: "Contact",
     contactLead: "Pour collaborations, mandats fractionnaires ou médias.",
     footerLoc: "Basé au Québec, Canada",
@@ -53,7 +51,7 @@ const messages = {
           "Focus areas: software architecture, cloud platforms, applied AI/automation, compliance & data protection, customer experience and product analytics. Tooling over the years includes C/C++, Java, Go, Python, JavaScript/TypeScript, modern Web ecosystems and CI/CD.",
           "Today he helps growing SMEs, nonprofits, and indie publishers make their systems simpler, safer, and more profitable — without over‑engineering."
       ],
-    nav: { about: "About", books: "Books", projects: "Projects", photos: "Photos", contact: "Contact" },
+    nav: { about: "About", books: "Books", projects: "Projects", contact: "Contact" },
     heroTitle: "vCIO & Software Architect · Author-Publisher",
     heroBody:
       "30+ years in tech: technology leadership, architecture, digital transformation, cloud (AWS/Azure/GCP), security & compliance (ISO 27001, Quebec Law 25, GDPR). Ex‑Intuit (Quicken, QuickBooks, TurboTax), founder of Global‑Lan, co‑founder of 55+ YOGA.",
@@ -71,8 +69,6 @@ const messages = {
     aiGuides: "AI Guides",
     puzzleBooks: "Puzzle Books",
     projectsTitle: "Projects",
-    photosTitle: "Photos",
-    photosHint: "Curated personal & professional shots.",
     contactTitle: "Contact",
     contactLead: "For collaborations, fractional work or media.",
     footerLoc: "Based in Québec, Canada",
@@ -149,15 +145,6 @@ function coverUrl(asin: string) {
   return `https://images-na.ssl-images-amazon.com/images/P/${asin}.01._SL1000_.jpg`;
 }
 
-const photos = [
-  { src: "/images/profile.jpeg", alt: "Portrait lumineux — chemise blanche" },
-  { src: "/images/nature.jpeg", alt: "Plein air, montagnes" },
-  { src: "/images/portrait-noir.jpeg", alt: "Portrait professionnel fond noir" },
-  { src: "/images/portrait-classique.jpeg", alt: "Portrait classique studio" },
-  { src: "/images/wings.jpeg", alt: "Street art — ailes murales" },
-  { src: "/images/portrait-jeune.jpeg", alt: "Portrait plus ancien verdure" },
-];
-
 // tag books by type for separate sections
 const aiBooks = [
   { title: "AI in Action: Real-World Strategies for Small Business Growth", asin: "B0FLB9KK8S", lang: "EN" },
@@ -186,7 +173,6 @@ export default function SitePersoSylvain() {
         <About t={t} />
         <Biography t={t} />
         <Books t={t} />
-        <Gallery t={t} />
         <Contact t={t} />
       </main>
       <Footer t={t} />
@@ -208,7 +194,6 @@ function Header({ t, onToggle }: any) {
           <a href="#about" className="hover:text-white">{t.nav.about}</a>
           <a href="#bio" className="hover:text-white">{t.bioTitle}</a>
           <a href="#books" className="hover:text-white">{t.nav.books}</a>
-          <a href="#gallery" className="hover:text-white">{t.nav.photos}</a>
           <a href="#contact" className="hover:text-white">{t.nav.contact}</a>
           <button onClick={onToggle} className="ml-2 rounded-lg px-2 py-1 ring-1 ring-neutral-700 hover:bg-neutral-900/60">
             {t.langToggle}
@@ -315,22 +300,6 @@ function Books({ t }: any) {
       <h3 className="mt-10 mb-3 text-lg font-semibold">{t.puzzleBooks}</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {puzzleBooks.map((b) => <BookCard key={b.asin} book={b} t={t} />)}
-      </div>
-    </section>
-  );
-}
-
-function Gallery({ t }: any) {
-  return (
-    <section id="gallery" className="py-16 sm:py-24 border-t border-neutral-800">
-      <h2 className="text-2xl sm:text-3xl font-bold">{t.photosTitle}</h2>
-      <p className="mt-3 text-neutral-300">{t.photosHint}</p>
-      <div className="mt-8 grid sm:grid-cols-2 gap-6">
-        {photos.map((p, i) => (
-          <figure key={i} className="overflow-hidden rounded-3xl ring-1 ring-white/10 bg-neutral-900">
-            <img src={p.src} alt={p.alt} className="w-full h-full object-cover" />
-          </figure>
-        ))}
       </div>
     </section>
   );
