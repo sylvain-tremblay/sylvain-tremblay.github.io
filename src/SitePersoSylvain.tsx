@@ -166,8 +166,8 @@ const puzzleBooks = [
 ];
 
 const illustratedBooks = [
-  { title: "Livre illustré — B0G442LCSZ", asin: "B0G442LCSZ", lang: "FR" },
-  { title: "Livre illustré — B0G4DM1DGT", asin: "B0G4DM1DGT", lang: "FR" },
+  { title: "Nora et ses amis", asin: "B0G442LCSZ", lang: "FR" },
+  { title: "Nora et Papi", asin: "B0G4DM1DGT", lang: "FR" },
 ];
 
 export default function SitePersoSylvain() {
