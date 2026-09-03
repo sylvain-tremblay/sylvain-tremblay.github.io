@@ -204,6 +204,17 @@ const aiBooks = [
   },
 ];
 
+// Affichage seulement (le lien de chaque carte suit toujours book.lang, pas
+// ceci) : dans chaque paire FR/EN d'aiBooks, la version qui correspond à la
+// langue du site apparaît en premier — EN à gauche sur le site anglais,
+// FR à gauche sur le site français.
+function orderByLang(books: any[], lang: Lang) {
+  if (lang !== "en") return books;
+  const out: any[] = [];
+  for (let i = 0; i < books.length; i += 2) out.push(books[i + 1], books[i]);
+  return out;
+}
+
 const puzzleBooks = [
   { title: "Mots cachés — Été", asin: "B0FNL9WY4N", lang: "FR" },
   { title: "Mots cachés — Camping & plein air", asin: "B0FN7RF28R", lang: "FR" },
@@ -230,7 +241,7 @@ export default function SitePersoSylvain() {
       <main className="mx-auto max-w-6xl px-4 sm:px-6">
         <About t={t} />
         <Biography t={t} />
-        <Books t={t} />
+        <Books t={t} lang={lang} />
         <Contact t={t} />
       </main>
       <Footer t={t} />
@@ -377,7 +388,8 @@ function BookCard({ book, t, mode }: any) {
   );
 }
 
-function Books({ t }: any) {
+function Books({ t, lang }: any) {
+  const orderedAiBooks = orderByLang(aiBooks, lang);
   return (
     <section id="books" className="py-16 sm:py-24 border-t border-neutral-800">
       <h2 className="text-2xl sm:text-3xl font-bold">{t.booksTitle}</h2>
@@ -385,7 +397,7 @@ function Books({ t }: any) {
 
       <h3 className="mt-8 mb-3 text-lg font-semibold">{t.aiGuides}</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {aiBooks.map((b) => <BookCard key={b.asin} book={b} t={t} mode="editionsst" />)}
+        {orderedAiBooks.map((b) => <BookCard key={b.asin} book={b} t={t} mode="editionsst" />)}
       </div>
 
       <h3 className="mt-10 mb-3 text-lg font-semibold">{t.puzzleBooks}</h3>
