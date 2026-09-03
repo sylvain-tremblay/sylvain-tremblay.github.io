@@ -167,18 +167,18 @@ function coverUrl(asin: string) {
 // tag books by type for separate sections
 const aiBooks = [
   {
-    title: "AI in Action: Real-World Strategies for Small Business Growth",
-    asin: "B0FLB9KK8S",
-    lang: "EN",
-    cover: "/images/covers/ai-in-action.jpg",
-    pageFr: "/lia-en-action/",
-    pageEn: "/en/ai-in-action/",
-  },
-  {
     title: "L’IA en action : Stratégies concrètes pour la croissance des PME",
     asin: "B0FLF2NHRM",
     lang: "FR",
     cover: "/images/covers/lia-en-action.jpg",
+    pageFr: "/lia-en-action/",
+    pageEn: "/en/ai-in-action/",
+  },
+  {
+    title: "AI in Action: Real-World Strategies for Small Business Growth",
+    asin: "B0FLB9KK8S",
+    lang: "EN",
+    cover: "/images/covers/ai-in-action.jpg",
     pageFr: "/lia-en-action/",
     pageEn: "/en/ai-in-action/",
   },
