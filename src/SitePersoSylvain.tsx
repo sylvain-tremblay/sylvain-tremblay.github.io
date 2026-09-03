@@ -30,6 +30,7 @@ const messages = {
     booksTitle: "Livres",
     booksIntro: "Guides IA (EN/FR) et livres de casse‑têtes — miniatures optimisées.",
     viewOnEditionsst: "Voir sur editionsst.com",
+    viewOnAmazon: "Voir sur Amazon",
     aiGuides: "Livres sur l’IA",
     puzzleBooks: "Livres de casse‑têtes",
     illustratedBooks: "Livres illustrés",
@@ -67,6 +68,7 @@ const messages = {
     booksTitle: "Books",
     booksIntro: "AI guides (EN/FR) and puzzle books — optimized thumbnails.",
     viewOnEditionsst: "See on editionsst.com",
+    viewOnAmazon: "View on Amazon",
     aiGuides: "AI Books",
     puzzleBooks: "Puzzle Books",
     illustratedBooks: "Illustrated Books",
@@ -88,6 +90,71 @@ function editionsstLink(book: { pageFr?: string; pageEn?: string }, lang: Lang) 
   const page = lang === "fr" ? book.pageFr : book.pageEn;
   if (page) return `${EDITIONSST_BASE}${page}`;
   return lang === "fr" ? `${EDITIONSST_BASE}/` : `${EDITIONSST_BASE}/en/`;
+}
+
+type MarketCode =
+  | "US" | "CA" | "UK" | "GB" | "FR" | "DE" | "ES" | "IT"
+  | "AU" | "MX" | "BR" | "JP" | "IN" | "NL";
+
+const MARKET_DOMAIN: Record<MarketCode, string> = {
+  US: "amazon.com",
+  CA: "amazon.ca",
+  UK: "amazon.co.uk", // alias GB
+  GB: "amazon.co.uk",
+  FR: "amazon.fr",
+  DE: "amazon.de",
+  ES: "amazon.es",
+  IT: "amazon.it",
+  AU: "amazon.com.au",
+  MX: "amazon.com.mx",
+  BR: "amazon.com.br",
+  JP: "amazon.co.jp",
+  IN: "amazon.in",
+  NL: "amazon.nl",
+};
+
+// Lien Amazon géolocalisé — comportement d'origine, restauré pour les livres
+// de casse-têtes et les livres illustrés (seuls les trois titres de la série
+// IA pointent vers editionsst.com, voir editionsstLink ci-dessus).
+function amazonLink(
+  asin: string,
+  opts?: { market?: MarketCode }
+) {
+  if (opts?.market) {
+    const domain = MARKET_DOMAIN[opts.market];
+    if (domain) return `https://${domain}/dp/${asin}`;
+  }
+
+  const locale =
+    (typeof navigator !== "undefined" && (navigator.languages?.[0] || navigator.language)) ||
+    "en-US";
+  const lc = locale.toLowerCase();
+
+  // Vérifie d’abord les régions explicites (fr-CA, en-CA, etc.)
+  const region = lc.split("-")[1]?.toUpperCase() as MarketCode | undefined;
+  if (region && MARKET_DOMAIN[region]) {
+    return `https://${MARKET_DOMAIN[region]}/dp/${asin}`;
+  }
+
+  // Priorité: CA avant FR
+  if (lc.includes("ca")) return `https://${MARKET_DOMAIN.CA}/dp/${asin}`;
+  if (lc.includes("fr")) return `https://${MARKET_DOMAIN.FR}/dp/${asin}`;
+
+  // Autres langues/régions
+  if (lc.includes("us")) return `https://${MARKET_DOMAIN.US}/dp/${asin}`;
+  if (lc.includes("uk") || lc.includes("gb")) return `https://${MARKET_DOMAIN.UK}/dp/${asin}`;
+  if (lc.startsWith("de")) return `https://${MARKET_DOMAIN.DE}/dp/${asin}`;
+  if (lc.startsWith("es")) return `https://${MARKET_DOMAIN.ES}/dp/${asin}`;
+  if (lc.startsWith("it")) return `https://${MARKET_DOMAIN.IT}/dp/${asin}`;
+  if (lc.startsWith("ja")) return `https://${MARKET_DOMAIN.JP}/dp/${asin}`;
+  if (lc.startsWith("nl")) return `https://${MARKET_DOMAIN.NL}/dp/${asin}`;
+  if (lc.startsWith("hi") || lc.includes("in")) return `https://${MARKET_DOMAIN.IN}/dp/${asin}`;
+  if (lc.startsWith("pt") || lc.includes("br")) return `https://${MARKET_DOMAIN.BR}/dp/${asin}`;
+  if (lc.includes("mx")) return `https://${MARKET_DOMAIN.MX}/dp/${asin}`;
+  if (lc.includes("au")) return `https://${MARKET_DOMAIN.AU}/dp/${asin}`;
+
+  // défaut
+  return `https://${MARKET_DOMAIN.US}/dp/${asin}`;
 }
 
 // Cover CDN de secours pour les livres sans miniature locale
@@ -233,8 +300,9 @@ function Biography({ t }: any) {
   );
 }
 
-function BookCard({ book, t, lang }: any) {
-  const href = editionsstLink(book, lang);
+function BookCard({ book, t, lang, mode }: any) {
+  const href = mode === "editionsst" ? editionsstLink(book, lang) : amazonLink(book.asin);
+  const label = mode === "editionsst" ? t.viewOnEditionsst : t.viewOnAmazon;
   const cover = book.cover ?? coverUrl(book.asin);
   return (
     <div className="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-4 hover:bg-neutral-900">
@@ -251,7 +319,7 @@ function BookCard({ book, t, lang }: any) {
       <h3 className="mt-1 font-medium leading-snug text-sm">{book.title}</h3>
       <div className="mt-3">
         <a href={href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-xs text-fuchsia-300 px-2.5 py-1.5 rounded-lg ring-1 ring-neutral-700 hover:bg-neutral-800">
-          <span>{t.viewOnEditionsst}</span>
+          <span>{label}</span>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5">
             <path d="M13 5h6v6h-2V8.41l-9.29 9.3-1.42-1.42 9.3-9.29H13V5z" />
           </svg>
@@ -269,17 +337,17 @@ function Books({ t, lang }: any) {
 
       <h3 className="mt-8 mb-3 text-lg font-semibold">{t.aiGuides}</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {aiBooks.map((b) => <BookCard key={b.asin} book={b} t={t} lang={lang} />)}
+        {aiBooks.map((b) => <BookCard key={b.asin} book={b} t={t} lang={lang} mode="editionsst" />)}
       </div>
 
       <h3 className="mt-10 mb-3 text-lg font-semibold">{t.puzzleBooks}</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {puzzleBooks.map((b) => <BookCard key={b.asin} book={b} t={t} lang={lang} />)}
+        {puzzleBooks.map((b) => <BookCard key={b.asin} book={b} t={t} lang={lang} mode="amazon" />)}
       </div>
 
       <h3 className="mt-10 mb-3 text-lg font-semibold">{t.illustratedBooks}</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {illustratedBooks.map((b) => <BookCard key={b.asin} book={b} t={t} lang={lang} />)}
+        {illustratedBooks.map((b) => <BookCard key={b.asin} book={b} t={t} lang={lang} mode="amazon" />)}
       </div>
     </section>
   );
