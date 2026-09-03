@@ -5,18 +5,18 @@ const messages = {
   fr: {
     bioTitle: "Biographie complète",
     bioParas: [
-      "Sylvain Tremblay œuvre depuis plus de 30 ans à l’intersection de la stratégie d’affaires, de l’architecture logicielle et de la transformation numérique. Bilingue français-anglais, il a bâti sa carrière sur une conviction simple : la technologie n’a de valeur que lorsqu’elle rend une organisation plus claire, plus sûre et plus capable d’agir.",
-      "Il acquiert une solide rigueur produit chez Intuit, où il contribue à des solutions utilisées à grande échelle — Quicken, QuickBooks et ImpôtRapide/TurboTax Online. Cette expérience ancre chez lui une pratique exigeante de la performance, de la sécurité, de la télémétrie et de la simplification des parcours clients.",
-      "En 2007, il fonde Global‑Lan, entreprise d’hébergement et de services Web qu’il dirige jusqu’en 2022. Il y met en place des pratiques d’exploitation durables : niveaux de service, surveillance, sauvegardes, reprise après sinistre et automatisations conçues pour réduire les coûts récurrents sans sacrifier la fiabilité.",
-      "En 2020, il cofonde 55+ YOGA, une plateforme de cours en ligne. Il y pilote la conception UX, la diffusion vidéo, l’abonnement, l’automatisation marketing et la conformité — une expérience qui affine sa compréhension concrète des modèles d’affaires numériques et de la relation client.",
-      "Aujourd’hui, Sylvain accompagne des PME, des OBNL et des équipes dirigeantes comme vCIO et architecte logiciel fractionnaire. Il intervient là où les décisions technologiques doivent être à la fois ambitieuses et pragmatiques : feuille de route, architecture, modernisation applicative, migration cloud (AWS, Azure, GCP), cybersécurité, conformité (ISO 27001, Loi 25, RGPD) et intégration responsable de l’IA.",
-      "Son approche est orientée vers l’impact : partir des objectifs d’affaires, clarifier la valeur attendue, choisir l’architecture minimale viable, sécuriser les données dès la conception, documenter juste ce qu’il faut et faire progresser les équipes par itérations courtes. Ses domaines de prédilection couvrent l’architecture logicielle, le cloud, l’automatisation, l’IA appliquée, la protection des données, l’expérience client et l’analytique produit.",
-      "En 2026, il crée sa propre maison d’édition afin de donner une continuité éditoriale à son travail. Elle porte des ouvrages ancrés dans la pratique, la clarté et l’autonomie des lecteurs — qu’il s’agisse de technologie, de création ou de livres illustrés.",
+      "Sylvain Tremblay travaille depuis plus de 30 ans à l’intersection de la stratégie d’affaires, de l’architecture logicielle et de la transformation numérique. Bilingue français-anglais, il a bâti sa carrière sur une conviction simple : la technologie n’a de valeur que lorsqu’elle rend une organisation plus claire, plus sûre et plus capable d’agir.",
+      "Il développe une rigueur produit exigeante chez Intuit, où il contribue à des solutions utilisées à grande échelle — Quicken, QuickBooks et ImpôtRapide/TurboTax Online — et y affine sa pratique de la performance, de la sécurité, de la télémétrie et de la simplification des parcours clients.",
+      "En 2007, il fonde Global‑Lan, entreprise d’hébergement et de services Web qu’il dirige jusqu’en 2022, où il met en place des pratiques d’exploitation durables : niveaux de service, surveillance, sauvegardes, reprise après sinistre et automatisations pensées pour réduire les coûts récurrents sans sacrifier la fiabilité.",
+      "En 2020, il cofonde 55+ YOGA, une plateforme de cours en ligne, où il pilote la conception UX, la diffusion vidéo, l’abonnement, l’automatisation marketing et la conformité — une expérience qui approfondit sa compréhension des modèles d’affaires numériques et de la relation client.",
+      "Aujourd’hui, il accompagne des PME, des OBNL et des équipes dirigeantes comme architecte logiciel fractionnaire, là où les décisions technologiques doivent être à la fois ambitieuses et pragmatiques : feuille de route, architecture, modernisation applicative, migration cloud (AWS, Azure, GCP), cybersécurité, conformité (ISO 27001, Loi 25, RGPD) et intégration responsable de l’IA.",
+      "Son approche : partir des objectifs d’affaires, clarifier la valeur attendue, choisir l’architecture minimale viable, sécuriser les données dès la conception, documenter juste ce qu’il faut et avancer par itérations courtes. Ses domaines de prédilection : architecture logicielle, cloud, automatisation, IA appliquée, protection des données, expérience client et analytique produit.",
+      "En 2026, il crée sa propre maison d’édition pour donner une continuité éditoriale à son travail : des ouvrages ancrés dans la pratique, la clarté et l’autonomie des lecteurs, qu’il s’agisse de technologie, de création ou de livres illustrés.",
       <><em>L’IA en action : Stratégies concrètes pour la croissance des PME</em> et sa version anglaise, <em>AI in Action: Real‑World Strategies for Small Business Growth</em>, ouvrent sa série sur l’intelligence artificielle pour les petites entreprises. Cette série comprend aussi <em>L’écart, c’est vous. — Décider, construire, vérifier et durer avec l’IA</em>. Deux titres sont à paraître : <em>Personne n’a décidé ça. — Décider, répondre, assumer : ce que l’IA remet entre vos mains</em>, consacré à la responsabilité et à l’éthique; et <em>Les mains dans l’IA — Écrire, vérifier, automatiser : le guide pratique pour les petites entreprises</em>, consacré au geste, aux outils et aux pratiques concrètes.</>,
       "Il publie également deux livres illustrés et une collection de livres de casse‑têtes thématiques. À travers l’ensemble de ses projets, Sylvain Tremblay poursuit le même objectif : transformer des sujets complexes en décisions, systèmes et œuvres utiles — solides dans leur conception, accessibles dans leur forme et durables dans leurs effets."
     ],
     nav: { about: "Parcours", books: "Livres", projects: "Projets", contact: "Contact" },
-    heroTitle: "vCIO & Architecte logiciel · Auteur-éditeur numérique",
+    heroTitle: "Architecte logiciel fractionnaire · Auteur-éditeur numérique",
     heroBody:
       "30+ ans d’expérience en TI : direction technologique, architecture, transformation numérique, cloud (AWS/Azure/GCP), cybersécurité et conformité (ISO 27001, Loi 25, RGPD). Ancien d’Intuit (Quicken, QuickBooks, TurboTax), fondateur de Global‑Lan, cofondateur de 55+ YOGA.",
     ctaContact: "Me contacter",
@@ -26,10 +26,10 @@ const messages = {
     aboutP1:
       "J’aide les dirigeants de PME et organisations à prendre des décisions technologiques claires et mesurables : feuille de route numérique, architecture logicielle, migration cloud, sécurité et conformité (Loi 25, RGPD), et intégration pragmatique de l’IA.",
     aboutP2:
-      "Mon approche est simple : livrer vite une valeur visible (audit éclair → plan d’action priorisé), puis itérer avec des indicateurs concrets. J’interviens en mode fractionnaire (vCIO/architecte), aux côtés des équipes internes et partenaires.",
+      "Mon approche est simple : livrer vite une valeur visible (audit éclair → plan d’action priorisé), puis itérer avec des indicateurs concrets. J’interviens en mode fractionnaire, comme architecte logiciel, aux côtés des équipes internes et partenaires.",
     booksTitle: "Livres",
     booksIntro: "Guides IA (EN/FR) et livres de casse‑têtes — miniatures optimisées.",
-    viewOnAmazon: "Voir sur Amazon",
+    viewOnEditionsst: "Voir sur editionsst.com",
     aiGuides: "Livres sur l’IA",
     puzzleBooks: "Livres de casse‑têtes",
     illustratedBooks: "Livres illustrés",
@@ -43,17 +43,17 @@ const messages = {
     bioTitle: "Full Biography",
     bioParas: [
       "Sylvain Tremblay has spent more than 30 years at the intersection of business strategy, software architecture, and digital transformation. Bilingual in French and English, he has built his career on a simple conviction: technology matters only when it makes an organization clearer, safer, and more capable of acting.",
-      "He developed strong product discipline at Intuit, contributing to widely used solutions including Quicken, QuickBooks, and TurboTax/ImpôtRapide Online. That experience grounded his practice in performance, security, telemetry, and the simplification of customer journeys.",
-      "In 2007, he founded Global‑Lan, a web hosting and services company he led until 2022. There, he established durable operating practices: service levels, monitoring, backups, disaster recovery, and automations designed to reduce recurring costs without compromising reliability.",
-      "In 2020, he co-founded 55+ YOGA, an online course platform. He led UX, video delivery, subscriptions, marketing automation, and compliance — experience that deepened his hands-on understanding of digital business models and customer relationships.",
-      "Today, Sylvain advises SMEs, nonprofits, and leadership teams as a fractional vCIO and software architect. He works where technology decisions need to be both ambitious and pragmatic: roadmaps, architecture, application modernization, cloud migration (AWS, Azure, GCP), cybersecurity, compliance (ISO 27001, Quebec Law 25, GDPR), and responsible AI integration.",
-      "His approach is impact-driven: start with business outcomes, clarify the expected value, choose the minimum viable architecture, secure data by design, document just enough, and build team capability through short iterations. His focus spans software architecture, cloud, automation, applied AI, data protection, customer experience, and product analytics.",
-      "In 2026, he created his own publishing house to give his editorial work a lasting home. It carries books grounded in practice, clarity, and reader autonomy — across technology, creative work, and illustrated books.",
+      "He developed strong product discipline at Intuit, contributing to widely used solutions — Quicken, QuickBooks, and TurboTax/ImpôtRapide Online — and sharpened his practice of performance, security, telemetry, and customer-journey simplification.",
+      "In 2007, he founded Global‑Lan, a web hosting and services company he led until 2022, where he established durable operating practices: service levels, monitoring, backups, disaster recovery, and automations designed to cut recurring costs without compromising reliability.",
+      "In 2020, he co-founded 55+ YOGA, an online course platform, where he led UX, video delivery, subscriptions, marketing automation, and compliance — deepening his hands-on understanding of digital business models and customer relationships.",
+      "Today, he advises SMEs, nonprofits, and leadership teams as a fractional software architect, working where technology decisions need to be both ambitious and pragmatic: roadmaps, architecture, application modernization, cloud migration (AWS, Azure, GCP), cybersecurity, compliance (ISO 27001, Quebec Law 25, GDPR), and responsible AI integration.",
+      "His approach: start with business outcomes, clarify the expected value, choose the minimum viable architecture, secure data by design, document just enough, and advance through short iterations. His focus areas: software architecture, cloud, automation, applied AI, data protection, customer experience, and product analytics.",
+      "In 2026, he founded his own publishing house to give his editorial work a lasting home: books grounded in practice, clarity, and reader autonomy — across technology, creative work, and illustrated books.",
       <><em>L’IA en action: Stratégies concrètes pour la croissance des PME</em> and its English edition, <em>AI in Action: Real‑World Strategies for Small Business Growth</em>, open his AI series for small businesses. The series also includes <em>The gap is you. — Decide, build, verify, and last with AI</em>. Two books are forthcoming: <em>Nobody made that decision. — Decide, respond, take responsibility: what AI puts back in your hands</em>, on responsibility and ethics; and <em>Hands on AI — Write, verify, automate: the practical guide for small businesses</em>, focused on real tools and practical work.</>,
       "He also publishes two illustrated books and a collection of themed word-search puzzle books. Across all his work, Sylvain Tremblay pursues the same aim: turn complex subjects into useful decisions, systems, and works — sound in design, accessible in form, and durable in effect."
     ],
     nav: { about: "About", books: "Books", projects: "Projects", contact: "Contact" },
-    heroTitle: "vCIO & Software Architect · Author-Publisher",
+    heroTitle: "Fractional Software Architect · Author-Publisher",
     heroBody:
       "30+ years in tech: technology leadership, architecture, digital transformation, cloud (AWS/Azure/GCP), security & compliance (ISO 27001, Quebec Law 25, GDPR). Ex‑Intuit (Quicken, QuickBooks, TurboTax), founder of Global‑Lan, co‑founder of 55+ YOGA.",
     ctaContact: "Contact me",
@@ -63,10 +63,10 @@ const messages = {
     aboutP1:
       "I help SME leaders and organizations make clear, measurable technology decisions: digital roadmap, software architecture, cloud migration, security & compliance (Law 25, GDPR), and pragmatic AI integration.",
     aboutP2:
-      "My approach is straightforward: deliver visible value fast (rapid assessment → prioritized plan), then iterate with concrete KPIs. I operate in a fractional vCIO/architect role, alongside internal teams and partners.",
+      "My approach is straightforward: deliver visible value fast (rapid assessment → prioritized plan), then iterate with concrete KPIs. I operate in a fractional software architect role, alongside internal teams and partners.",
     booksTitle: "Books",
     booksIntro: "AI guides (EN/FR) and puzzle books — optimized thumbnails.",
-    viewOnAmazon: "View on Amazon",
+    viewOnEditionsst: "See on editionsst.com",
     aiGuides: "AI Books",
     puzzleBooks: "Puzzle Books",
     illustratedBooks: "Illustrated Books",
@@ -80,78 +80,43 @@ const messages = {
 
 type Lang = keyof typeof messages;
 
-type MarketCode =
-  | "US" | "CA" | "UK" | "GB" | "FR" | "DE" | "ES" | "IT"
-  | "AU" | "MX" | "BR" | "JP" | "IN" | "NL";
+const EDITIONSST_BASE = "https://editionsst.com";
 
-const MARKET_DOMAIN: Record<MarketCode, string> = {
-  US: "amazon.com",
-  CA: "amazon.ca",
-  UK: "amazon.co.uk", // alias GB
-  GB: "amazon.co.uk",
-  FR: "amazon.fr",
-  DE: "amazon.de",
-  ES: "amazon.es",
-  IT: "amazon.it",
-  AU: "amazon.com.au",
-  MX: "amazon.com.mx",
-  BR: "amazon.com.br",
-  JP: "amazon.co.jp",
-  IN: "amazon.in",
-  NL: "amazon.nl",
-};
-
-function amazonLink(
-  asin: string,
-  opts?: { market?: MarketCode }
-) {
-  if (opts?.market) {
-    const domain = MARKET_DOMAIN[opts.market];
-    if (domain) return `https://${domain}/dp/${asin}`;
-  }
-
-  const locale =
-    (typeof navigator !== "undefined" && (navigator.languages?.[0] || navigator.language)) ||
-    "en-US";
-  const lc = locale.toLowerCase();
-
-  // Vérifie d’abord les régions explicites (fr-CA, en-CA, etc.)
-  const region = lc.split("-")[1]?.toUpperCase() as MarketCode | undefined;
-  if (region && MARKET_DOMAIN[region]) {
-    return `https://${MARKET_DOMAIN[region]}/dp/${asin}`;
-  }
-
-  // Priorité: CA avant FR
-  if (lc.includes("ca")) return `https://${MARKET_DOMAIN.CA}/dp/${asin}`;
-  if (lc.includes("fr")) return `https://${MARKET_DOMAIN.FR}/dp/${asin}`;
-
-  // Autres langues/régions
-  if (lc.includes("us")) return `https://${MARKET_DOMAIN.US}/dp/${asin}`;
-  if (lc.includes("uk") || lc.includes("gb")) return `https://${MARKET_DOMAIN.UK}/dp/${asin}`;
-  if (lc.startsWith("de")) return `https://${MARKET_DOMAIN.DE}/dp/${asin}`;
-  if (lc.startsWith("es")) return `https://${MARKET_DOMAIN.ES}/dp/${asin}`;
-  if (lc.startsWith("it")) return `https://${MARKET_DOMAIN.IT}/dp/${asin}`;
-  if (lc.startsWith("ja")) return `https://${MARKET_DOMAIN.JP}/dp/${asin}`;
-  if (lc.startsWith("nl")) return `https://${MARKET_DOMAIN.NL}/dp/${asin}`;
-  if (lc.startsWith("hi") || lc.includes("in")) return `https://${MARKET_DOMAIN.IN}/dp/${asin}`;
-  if (lc.startsWith("pt") || lc.includes("br")) return `https://${MARKET_DOMAIN.BR}/dp/${asin}`;
-  if (lc.includes("mx")) return `https://${MARKET_DOMAIN.MX}/dp/${asin}`;
-  if (lc.includes("au")) return `https://${MARKET_DOMAIN.AU}/dp/${asin}`;
-
-  // défaut
-  return `https://${MARKET_DOMAIN.US}/dp/${asin}`;
+// Lien vers editionsst.com : page d’ouvrage dédiée si elle existe (selon la langue
+// affichée sur le site), sinon page d’accueil editionsst.com dans cette même langue.
+function editionsstLink(book: { pageFr?: string; pageEn?: string }, lang: Lang) {
+  const page = lang === "fr" ? book.pageFr : book.pageEn;
+  if (page) return `${EDITIONSST_BASE}${page}`;
+  return lang === "fr" ? `${EDITIONSST_BASE}/` : `${EDITIONSST_BASE}/en/`;
 }
 
-// Use a higher-res cover and display it smaller for sharpness
+// Cover CDN de secours pour les livres sans miniature locale
 function coverUrl(asin: string) {
   return `https://images-na.ssl-images-amazon.com/images/P/${asin}.01._SL1000_.jpg`;
 }
 
 // tag books by type for separate sections
 const aiBooks = [
-  { title: "AI in Action: Real-World Strategies for Small Business Growth", asin: "B0FLB9KK8S", lang: "EN" },
-  { title: "L’IA en action : Stratégies concrètes pour la croissance des PME", asin: "B0FLF2NHRM", lang: "FR" },
-  { title: "L’écart, c’est vous. — Décider, construire, vérifier et durer avec l’IA", asin: "B0HFWV11BX", lang: "FR" },
+  {
+    title: "AI in Action: Real-World Strategies for Small Business Growth",
+    asin: "B0FLB9KK8S",
+    lang: "EN",
+    cover: "/images/covers/ai-in-action.jpg",
+  },
+  {
+    title: "L’IA en action : Stratégies concrètes pour la croissance des PME",
+    asin: "B0FLF2NHRM",
+    lang: "FR",
+    cover: "/images/covers/lia-en-action.jpg",
+  },
+  {
+    title: "L’écart, c’est vous. — Décider, construire, vérifier et durer avec l’IA",
+    asin: "B0HFWV11BX",
+    lang: "FR",
+    cover: "/images/covers/lecart-cest-vous.jpg",
+    pageFr: "/lecart-cest-vous/",
+    pageEn: "/en/the-gap-is-you/",
+  },
 ];
 
 const puzzleBooks = [
@@ -180,7 +145,7 @@ export default function SitePersoSylvain() {
       <main className="mx-auto max-w-6xl px-4 sm:px-6">
         <About t={t} />
         <Biography t={t} />
-        <Books t={t} />
+        <Books t={t} lang={lang} />
         <Contact t={t} />
       </main>
       <Footer t={t} />
@@ -268,12 +233,14 @@ function Biography({ t }: any) {
   );
 }
 
-function BookCard({ book, t }: any) {
+function BookCard({ book, t, lang }: any) {
+  const href = editionsstLink(book, lang);
+  const cover = book.cover ?? coverUrl(book.asin);
   return (
     <div className="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-4 hover:bg-neutral-900">
-      <a href={amazonLink(book.asin)} target="_blank" rel="noreferrer" className="block mx-auto">
+      <a href={href} target="_blank" rel="noreferrer" className="block mx-auto">
         <img
-          src={coverUrl(book.asin)}
+          src={cover}
           alt={`Couverture — ${book.title}`}
           className="mx-auto rounded-md ring-1 ring-white/10 object-cover aspect-[2/3]"
           style={{ width: 160, height: 240 }}  // small display for sharpness
@@ -283,8 +250,8 @@ function BookCard({ book, t }: any) {
       <div className="text-xs text-neutral-400 mt-3">{book.lang}</div>
       <h3 className="mt-1 font-medium leading-snug text-sm">{book.title}</h3>
       <div className="mt-3">
-        <a href={amazonLink(book.asin)} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-xs text-fuchsia-300 px-2.5 py-1.5 rounded-lg ring-1 ring-neutral-700 hover:bg-neutral-800">
-          <span>{t.viewOnAmazon}</span>
+        <a href={href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-xs text-fuchsia-300 px-2.5 py-1.5 rounded-lg ring-1 ring-neutral-700 hover:bg-neutral-800">
+          <span>{t.viewOnEditionsst}</span>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5">
             <path d="M13 5h6v6h-2V8.41l-9.29 9.3-1.42-1.42 9.3-9.29H13V5z" />
           </svg>
@@ -294,7 +261,7 @@ function BookCard({ book, t }: any) {
   );
 }
 
-function Books({ t }: any) {
+function Books({ t, lang }: any) {
   return (
     <section id="books" className="py-16 sm:py-24 border-t border-neutral-800">
       <h2 className="text-2xl sm:text-3xl font-bold">{t.booksTitle}</h2>
@@ -302,17 +269,17 @@ function Books({ t }: any) {
 
       <h3 className="mt-8 mb-3 text-lg font-semibold">{t.aiGuides}</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {aiBooks.map((b) => <BookCard key={b.asin} book={b} t={t} />)}
+        {aiBooks.map((b) => <BookCard key={b.asin} book={b} t={t} lang={lang} />)}
       </div>
 
       <h3 className="mt-10 mb-3 text-lg font-semibold">{t.puzzleBooks}</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {puzzleBooks.map((b) => <BookCard key={b.asin} book={b} t={t} />)}
+        {puzzleBooks.map((b) => <BookCard key={b.asin} book={b} t={t} lang={lang} />)}
       </div>
 
       <h3 className="mt-10 mb-3 text-lg font-semibold">{t.illustratedBooks}</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {illustratedBooks.map((b) => <BookCard key={b.asin} book={b} t={t} />)}
+        {illustratedBooks.map((b) => <BookCard key={b.asin} book={b} t={t} lang={lang} />)}
       </div>
     </section>
   );
