@@ -39,6 +39,8 @@ const messages = {
     contactLead: "Pour collaborations, mandats fractionnaires ou médias.",
     footerLoc: "Basé au Québec, Canada",
     langToggle: "EN",
+    openMenu: "Ouvrir le menu",
+    closeMenu: "Fermer le menu",
   },
   en: {
     bioTitle: "Full Biography",
@@ -77,6 +79,8 @@ const messages = {
     contactLead: "For collaborations, fractional work or media.",
     footerLoc: "Based in Québec, Canada",
     langToggle: "FR",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
   },
 } as const;
 
@@ -235,6 +239,7 @@ export default function SitePersoSylvain() {
 }
 
 function Header({ t, onToggle }: any) {
+  const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/60 bg-neutral-950/80 border-b border-neutral-800">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between">
@@ -253,7 +258,36 @@ function Header({ t, onToggle }: any) {
             {t.langToggle}
           </button>
         </nav>
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          aria-label={open ? t.closeMenu : t.openMenu}
+          className="sm:hidden inline-flex items-center justify-center rounded-lg p-2 ring-1 ring-neutral-700 hover:bg-neutral-900/60"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="h-5 w-5">
+            {open ? (
+              <path d="M6 6l12 12M18 6L6 18" />
+            ) : (
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            )}
+          </svg>
+        </button>
       </div>
+      {open && (
+        <nav className="sm:hidden border-t border-neutral-800 px-4 py-3 flex flex-col gap-1 text-sm text-neutral-300 bg-neutral-950/95">
+          <a href="#about" onClick={() => setOpen(false)} className="py-2 hover:text-white">{t.nav.about}</a>
+          <a href="#bio" onClick={() => setOpen(false)} className="py-2 hover:text-white">{t.bioTitle}</a>
+          <a href="#books" onClick={() => setOpen(false)} className="py-2 hover:text-white">{t.nav.books}</a>
+          <a href="#contact" onClick={() => setOpen(false)} className="py-2 hover:text-white">{t.nav.contact}</a>
+          <button
+            onClick={() => { onToggle(); setOpen(false); }}
+            className="mt-2 self-start rounded-lg px-3 py-1.5 ring-1 ring-neutral-700 hover:bg-neutral-900/60"
+          >
+            {t.langToggle}
+          </button>
+        </nav>
+      )}
     </header>
   );
 }
