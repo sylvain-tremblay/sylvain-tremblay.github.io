@@ -84,12 +84,14 @@ type Lang = keyof typeof messages;
 
 const EDITIONSST_BASE = "https://editionsst.com";
 
-// Lien vers editionsst.com : page d’ouvrage dédiée si elle existe (selon la langue
-// affichée sur le site), sinon page d’accueil editionsst.com dans cette même langue.
-function editionsstLink(book: { pageFr?: string; pageEn?: string }, lang: Lang) {
-  const page = lang === "fr" ? book.pageFr : book.pageEn;
+// Lien vers editionsst.com : page d’ouvrage dédiée si elle existe, dans la
+// langue DU LIVRE (book.lang) — pas celle affichée sur le site. Une carte
+// anglaise doit mener à la page anglaise même quand le site est en français.
+function editionsstLink(book: { lang: string; pageFr?: string; pageEn?: string }) {
+  const bookLang: Lang = book.lang === "EN" ? "en" : "fr";
+  const page = bookLang === "fr" ? book.pageFr : book.pageEn;
   if (page) return `${EDITIONSST_BASE}${page}`;
-  return lang === "fr" ? `${EDITIONSST_BASE}/` : `${EDITIONSST_BASE}/en/`;
+  return bookLang === "fr" ? `${EDITIONSST_BASE}/` : `${EDITIONSST_BASE}/en/`;
 }
 
 type MarketCode =
@@ -224,7 +226,7 @@ export default function SitePersoSylvain() {
       <main className="mx-auto max-w-6xl px-4 sm:px-6">
         <About t={t} />
         <Biography t={t} />
-        <Books t={t} lang={lang} />
+        <Books t={t} />
         <Contact t={t} />
       </main>
       <Footer t={t} />
@@ -312,8 +314,8 @@ function Biography({ t }: any) {
   );
 }
 
-function BookCard({ book, t, lang, mode }: any) {
-  const href = mode === "editionsst" ? editionsstLink(book, lang) : amazonLink(book.asin);
+function BookCard({ book, t, mode }: any) {
+  const href = mode === "editionsst" ? editionsstLink(book) : amazonLink(book.asin);
   const label = mode === "editionsst" ? t.viewOnEditionsst : t.viewOnAmazon;
   const cover = book.cover ?? coverUrl(book.asin);
   return (
@@ -341,7 +343,7 @@ function BookCard({ book, t, lang, mode }: any) {
   );
 }
 
-function Books({ t, lang }: any) {
+function Books({ t }: any) {
   return (
     <section id="books" className="py-16 sm:py-24 border-t border-neutral-800">
       <h2 className="text-2xl sm:text-3xl font-bold">{t.booksTitle}</h2>
@@ -349,17 +351,17 @@ function Books({ t, lang }: any) {
 
       <h3 className="mt-8 mb-3 text-lg font-semibold">{t.aiGuides}</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {aiBooks.map((b) => <BookCard key={b.asin} book={b} t={t} lang={lang} mode="editionsst" />)}
+        {aiBooks.map((b) => <BookCard key={b.asin} book={b} t={t} mode="editionsst" />)}
       </div>
 
       <h3 className="mt-10 mb-3 text-lg font-semibold">{t.puzzleBooks}</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {puzzleBooks.map((b) => <BookCard key={b.asin} book={b} t={t} lang={lang} mode="amazon" />)}
+        {puzzleBooks.map((b) => <BookCard key={b.asin} book={b} t={t} mode="amazon" />)}
       </div>
 
       <h3 className="mt-10 mb-3 text-lg font-semibold">{t.illustratedBooks}</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {illustratedBooks.map((b) => <BookCard key={b.asin} book={b} t={t} lang={lang} mode="amazon" />)}
+        {illustratedBooks.map((b) => <BookCard key={b.asin} book={b} t={t} mode="amazon" />)}
       </div>
     </section>
   );
