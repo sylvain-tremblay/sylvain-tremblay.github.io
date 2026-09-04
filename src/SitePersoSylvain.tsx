@@ -396,7 +396,7 @@ function BookCard({ book, t, mode }: any) {
   const cover = book.cover ?? coverUrl(book.asin);
   return (
     <div className="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-4 hover:bg-neutral-900">
-      <a href={href} target="_blank" rel="noreferrer" className="block mx-auto">
+      <a href={href} className="block mx-auto">
         <img
           src={cover}
           alt={`Couverture — ${book.title}`}
@@ -408,7 +408,7 @@ function BookCard({ book, t, mode }: any) {
       <div className="text-xs text-neutral-400 mt-3">{book.lang}</div>
       <h3 className="mt-1 font-medium leading-snug text-sm">{book.title}</h3>
       <div className="mt-3">
-        <a href={href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-xs text-fuchsia-300 px-2.5 py-1.5 rounded-lg ring-1 ring-neutral-700 hover:bg-neutral-800">
+        <a href={href} className="inline-flex items-center gap-2 text-xs text-fuchsia-300 px-2.5 py-1.5 rounded-lg ring-1 ring-neutral-700 hover:bg-neutral-800">
           <span>{label}</span>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5">
             <path d="M13 5h6v6h-2V8.41l-9.29 9.3-1.42-1.42 9.3-9.29H13V5z" />
@@ -450,7 +450,7 @@ function Contact({ t }: any) {
       <h2 className="text-2xl sm:text-3xl font-bold">{t.contactTitle}</h2>
       <p className="mt-3 text-neutral-300">{t.contactLead}</p>
       <div className="mt-6 flex flex-wrap gap-3">
-        <a href="https://www.linkedin.com/in/sylvaintremblay/" target="_blank" rel="noreferrer" className="rounded-xl px-4 py-2 ring-1 ring-inset ring-neutral-700 hover:bg-neutral-900/60 text-sm" title="Profil LinkedIn">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/sylvaintremblay/" className="rounded-xl px-4 py-2 ring-1 ring-inset ring-neutral-700 hover:bg-neutral-900/60 text-sm" title="Profil LinkedIn">LinkedIn</a>
         <a href="mailto:info@sylvaintremblay.com" className="rounded-xl px-4 py-2 ring-1 ring-inset ring-neutral-700 hover:bg-neutral-900/60 text-sm" title="Adresse courriel">Courriel</a>
       </div>
     </section>
