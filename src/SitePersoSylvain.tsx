@@ -1,5 +1,5 @@
 
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 const messages = {
   fr: {
@@ -231,12 +231,43 @@ const illustratedBooks = [
   { title: "Nora et Papi", asin: "B0G4DM1DGT", lang: "FR" },
 ];
 
+// Langue déduite de l'URL (/en/ = anglais, tout le reste = français) plutôt
+// que d'un état par défaut : sans ça, un rafraîchissement sur /en/ revenait
+// systématiquement au français, l'état React n'ayant rien pour se souvenir
+// du choix ni l'URL pour le refléter.
+function langFromPath(pathname: string): Lang {
+  return pathname.replace(/\/+$/, "").toLowerCase() === "/en" ? "en" : "fr";
+}
+
 export default function SitePersoSylvain() {
-  const [lang, setLang] = useState<Lang>("fr");
+  const [lang, setLang] = useState<Lang>(() =>
+    typeof window !== "undefined" ? langFromPath(window.location.pathname) : "fr"
+  );
   const t = useMemo(() => messages[lang], [lang]);
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
+
+  // Garde l'affichage synchronisé avec les boutons précédent/suivant du
+  // navigateur, qui changent l'URL sans recharger la page.
+  useEffect(() => {
+    function onPopState() {
+      setLang(langFromPath(window.location.pathname));
+    }
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
+
+  function toggleLang() {
+    const next: Lang = lang === "fr" ? "en" : "fr";
+    setLang(next);
+    window.history.pushState({}, "", next === "en" ? "/en/" : "/");
+  }
+
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100 selection:bg-fuchsia-400/30">
-      <Header t={t} onToggle={() => setLang(lang === "fr" ? "en" : "fr")} />
+      <Header t={t} onToggle={toggleLang} />
       <Hero t={t} />
       <main className="mx-auto max-w-6xl px-4 sm:px-6">
         <About t={t} />
