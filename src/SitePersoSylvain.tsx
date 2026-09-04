@@ -450,7 +450,7 @@ function Contact({ t }: any) {
       <h2 className="text-2xl sm:text-3xl font-bold">{t.contactTitle}</h2>
       <p className="mt-3 text-neutral-300">{t.contactLead}</p>
       <div className="mt-6 flex flex-wrap gap-3">
-        <a href="https://www.linkedin.com/in/sylvaintremblay/" className="rounded-xl px-4 py-2 ring-1 ring-inset ring-neutral-700 hover:bg-neutral-900/60 text-sm" title="Profil LinkedIn">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/sylvaintremblay/" target="_blank" rel="noreferrer" className="rounded-xl px-4 py-2 ring-1 ring-inset ring-neutral-700 hover:bg-neutral-900/60 text-sm" title="Profil LinkedIn">LinkedIn</a>
         <a href="mailto:info@sylvaintremblay.com" className="rounded-xl px-4 py-2 ring-1 ring-inset ring-neutral-700 hover:bg-neutral-900/60 text-sm" title="Adresse courriel">Courriel</a>
       </div>
     </section>
