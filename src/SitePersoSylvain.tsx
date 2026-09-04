@@ -42,6 +42,9 @@ const messages = {
     openMenu: "Ouvrir le menu",
     closeMenu: "Fermer le menu",
     publisherLink: "Maison d’édition",
+    publisherAlt: "Éditions ST",
+    publisherLogo: "/images/logo-editions-st.png",
+    publisherHref: "https://editionsst.com/",
   },
   en: {
     bioTitle: "Full Biography",
@@ -83,6 +86,9 @@ const messages = {
     openMenu: "Open menu",
     closeMenu: "Close menu",
     publisherLink: "Publishing house",
+    publisherAlt: "ST Publishing",
+    publisherLogo: "/images/logo-st-publishing.png",
+    publisherHref: "https://editionsst.com/en/",
   },
 } as const;
 
@@ -465,8 +471,8 @@ function Footer({ t }: any) {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-10 text-sm text-neutral-400 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>© {new Date().getFullYear()} Sylvain Tremblay. Tous droits réservés.</div>
         <div className="flex items-center gap-4">
-          <a href="https://editionsst.com/" className="flex items-center gap-2 hover:text-white" title="Éditions ST">
-            <img src="/images/logo-editions-st.png" alt="Éditions ST" className="h-8 w-auto" />
+          <a href={t.publisherHref} className="flex items-center gap-2 hover:text-white" title={t.publisherAlt}>
+            <img src={t.publisherLogo} alt={t.publisherAlt} className="h-8 w-auto" />
             <span>{t.publisherLink}</span>
           </a>
           <span className="inline-flex items-center gap-2 rounded-xl bg-neutral-900/60 ring-1 ring-white/10 px-3 py-1">
