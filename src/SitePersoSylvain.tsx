@@ -257,14 +257,12 @@ const illustratedBooks = [
   { title: "Nora et Papi", asin: "B0G4DM1DGT", lang: "FR" },
 ];
 
-// Liens forcés sur amazon.com (market: "US"), plutôt que la résolution
-// géolocalisée par défaut de amazonLink — demande explicite de Sylvain.
 const coloringBooks = [
-  { title: "Friendly Halloween Shapes", asin: "B0HN3PBF59", lang: "EN", market: "US" },
-  { title: "Calaca Carnival", asin: "B0HNFW5WNF", lang: "EN", market: "US" },
-  { title: "Grandma’s Farmhouse Kitchen", asin: "B0HN5G72TL", lang: "EN", market: "US" },
-  { title: "Pip’s Night Shift", asin: "B0HNFYBNYN", lang: "EN", market: "US" },
-  { title: "Pip’s Workshop Countdown", asin: "B0HP88LJDH", lang: "EN", market: "US" },
+  { title: "Friendly Halloween Shapes", asin: "B0HN3PBF59", lang: "EN" },
+  { title: "Calaca Carnival", asin: "B0HNFW5WNF", lang: "EN" },
+  { title: "Grandma’s Farmhouse Kitchen", asin: "B0HN5G72TL", lang: "EN" },
+  { title: "Pip’s Night Shift", asin: "B0HNFYBNYN", lang: "EN" },
+  { title: "Pip’s Workshop Countdown", asin: "B0HP88LJDH", lang: "EN" },
 ];
 
 // Langue déduite de l'URL (/en/ = anglais, tout le reste = français) plutôt
@@ -427,10 +425,7 @@ function Biography({ t }: any) {
 }
 
 function BookCard({ book, t, mode }: any) {
-  const href =
-    mode === "editionsst"
-      ? editionsstLink(book)
-      : amazonLink(book.asin, book.market ? { market: book.market } : undefined);
+  const href = mode === "editionsst" ? editionsstLink(book) : amazonLink(book.asin);
   const label = mode === "editionsst" ? t.viewOnEditionsst : t.viewOnAmazon;
   const cover = book.cover ?? coverUrl(book.asin);
   return (
