@@ -210,6 +210,22 @@ const aiBooks = [
     pageFr: "/lecart-cest-vous/",
     pageEn: "/en/the-gap-is-you/",
   },
+  {
+    title: "Personne n’a décidé ça. — L’éthique de l’IA, vue du siège du propriétaire",
+    asin: "2925678025",
+    lang: "FR",
+    cover: "/images/covers/personne-na-decide-ca.jpg",
+    pageFr: "/personne-na-decide-ca/",
+    pageEn: "/en/nobody-decided-that/",
+  },
+  {
+    title: "Nobody Decided That. — AI ethics, seen from the owner’s seat",
+    asin: "2925678106",
+    lang: "EN",
+    cover: "/images/covers/nobody-decided-that.jpg",
+    pageFr: "/personne-na-decide-ca/",
+    pageEn: "/en/nobody-decided-that/",
+  },
 ];
 
 // Affichage seulement (le lien de chaque carte suit toujours book.lang, pas
