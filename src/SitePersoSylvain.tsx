@@ -253,8 +253,8 @@ const puzzleBooks = [
 ];
 
 const illustratedBooks = [
-  { title: "Nora et ses amis", asin: "B0G442LCSZ", lang: "FR" },
-  { title: "Nora et Papi", asin: "B0G4DM1DGT", lang: "FR" },
+  { title: "Nora et ses amis", asin: "B0G442LCSZ", lang: "FR", cover: "/images/covers/nora-et-ses-amis.jpg" },
+  { title: "Nora et Papi", asin: "B0G4DM1DGT", lang: "FR", cover: "/images/covers/nora-et-papi.jpg" },
 ];
 
 const coloringBooks = [
