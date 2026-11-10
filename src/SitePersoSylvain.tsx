@@ -34,6 +34,7 @@ const messages = {
     aiGuides: "Livres sur l’IA",
     puzzleBooks: "Livres de casse‑têtes",
     illustratedBooks: "Livres illustrés",
+    coloringBooks: "Livres à colorier pour enfants",
     projectsTitle: "Projets",
     contactTitle: "Contact",
     contactLead: "Pour collaborations, mandats fractionnaires ou médias.",
@@ -78,6 +79,7 @@ const messages = {
     aiGuides: "AI Books",
     puzzleBooks: "Puzzle Books",
     illustratedBooks: "Illustrated Books",
+    coloringBooks: "Coloring Books for Kids",
     projectsTitle: "Projects",
     contactTitle: "Contact",
     contactLead: "For collaborations, fractional work or media.",
@@ -255,6 +257,16 @@ const illustratedBooks = [
   { title: "Nora et Papi", asin: "B0G4DM1DGT", lang: "FR" },
 ];
 
+// Liens forcés sur amazon.com (market: "US"), plutôt que la résolution
+// géolocalisée par défaut de amazonLink — demande explicite de Sylvain.
+const coloringBooks = [
+  { title: "Friendly Halloween Shapes", asin: "B0HN3PBF59", lang: "EN", market: "US" },
+  { title: "Calaca Carnival", asin: "B0HNFW5WNF", lang: "EN", market: "US" },
+  { title: "Grandma’s Farmhouse Kitchen", asin: "B0HN5G72TL", lang: "EN", market: "US" },
+  { title: "Pip’s Night Shift", asin: "B0HNFYBNYN", lang: "EN", market: "US" },
+  { title: "Pip’s Workshop Countdown", asin: "B0HP88LJDH", lang: "EN", market: "US" },
+];
+
 // Langue déduite de l'URL (/en/ = anglais, tout le reste = français) plutôt
 // que d'un état par défaut : sans ça, un rafraîchissement sur /en/ revenait
 // systématiquement au français, l'état React n'ayant rien pour se souvenir
@@ -415,7 +427,10 @@ function Biography({ t }: any) {
 }
 
 function BookCard({ book, t, mode }: any) {
-  const href = mode === "editionsst" ? editionsstLink(book) : amazonLink(book.asin);
+  const href =
+    mode === "editionsst"
+      ? editionsstLink(book)
+      : amazonLink(book.asin, book.market ? { market: book.market } : undefined);
   const label = mode === "editionsst" ? t.viewOnEditionsst : t.viewOnAmazon;
   const cover = book.cover ?? coverUrl(book.asin);
   return (
@@ -463,6 +478,11 @@ function Books({ t, lang }: any) {
       <h3 className="mt-10 mb-3 text-lg font-semibold">{t.illustratedBooks}</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {illustratedBooks.map((b) => <BookCard key={b.asin} book={b} t={t} mode="amazon" />)}
+      </div>
+
+      <h3 className="mt-10 mb-3 text-lg font-semibold">{t.coloringBooks}</h3>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {coloringBooks.map((b) => <BookCard key={b.asin} book={b} t={t} mode="amazon" />)}
       </div>
     </section>
   );
