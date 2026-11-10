@@ -434,7 +434,7 @@ function BookCard({ book, t, mode }: any) {
         <img
           src={cover}
           alt={`Couverture — ${book.title}`}
-          className="mx-auto rounded-md ring-1 ring-white/10 object-cover aspect-[2/3]"
+          className="mx-auto rounded-md ring-1 ring-white/10 object-contain aspect-[2/3]"
           style={{ width: 160, height: 240 }}  // small display for sharpness
           loading="lazy"
         />
