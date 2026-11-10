@@ -434,8 +434,8 @@ function BookCard({ book, t, mode }: any) {
         <img
           src={cover}
           alt={`Couverture — ${book.title}`}
-          className="mx-auto rounded-md ring-1 ring-white/10 object-contain aspect-[2/3]"
-          style={{ width: 160, height: 240 }}  // small display for sharpness
+          className="mx-auto rounded-md ring-1 ring-white/10"
+          style={{ width: 160, height: "auto" }}  // hauteur libre : pas de ratio imposé, donc ni rognage ni bandes
           loading="lazy"
         />
       </a>
@@ -461,22 +461,22 @@ function Books({ t, lang }: any) {
       <p className="mt-3 text-neutral-300">{t.booksIntro}</p>
 
       <h3 className="mt-8 mb-3 text-lg font-semibold">{t.aiGuides}</h3>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-start">
         {orderedAiBooks.map((b) => <BookCard key={b.asin} book={b} t={t} mode="editionsst" />)}
       </div>
 
       <h3 className="mt-10 mb-3 text-lg font-semibold">{t.puzzleBooks}</h3>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-start">
         {puzzleBooks.map((b) => <BookCard key={b.asin} book={b} t={t} mode="amazon" />)}
       </div>
 
       <h3 className="mt-10 mb-3 text-lg font-semibold">{t.illustratedBooks}</h3>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-start">
         {illustratedBooks.map((b) => <BookCard key={b.asin} book={b} t={t} mode="amazon" />)}
       </div>
 
       <h3 className="mt-10 mb-3 text-lg font-semibold">{t.coloringBooks}</h3>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-start">
         {coloringBooks.map((b) => <BookCard key={b.asin} book={b} t={t} mode="amazon" />)}
       </div>
     </section>
