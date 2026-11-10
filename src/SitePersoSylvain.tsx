@@ -258,11 +258,11 @@ const illustratedBooks = [
 ];
 
 const coloringBooks = [
-  { title: "Friendly Halloween Shapes", asin: "B0HN3PBF59", lang: "EN" },
-  { title: "Calaca Carnival", asin: "B0HNFW5WNF", lang: "EN" },
-  { title: "Grandma’s Farmhouse Kitchen", asin: "B0HN5G72TL", lang: "EN" },
-  { title: "Pip’s Night Shift", asin: "B0HNFYBNYN", lang: "EN" },
-  { title: "Pip’s Workshop Countdown", asin: "B0HP88LJDH", lang: "EN" },
+  { title: "Friendly Halloween Shapes", asin: "B0HN3PBF59", lang: "EN", cover: "/images/covers/friendly-halloween-shapes.jpg" },
+  { title: "Calaca Carnival", asin: "B0HNFW5WNF", lang: "EN", cover: "/images/covers/calaca-carnival.jpg" },
+  { title: "Grandma’s Farmhouse Kitchen", asin: "B0HN5G72TL", lang: "EN", cover: "/images/covers/grandmas-farmhouse-kitchen.jpg" },
+  { title: "Pip’s Night Shift", asin: "B0HNFYBNYN", lang: "EN", cover: "/images/covers/pips-night-shift.jpg" },
+  { title: "Pip’s Workshop Countdown", asin: "B0HP88LJDH", lang: "EN", cover: "/images/covers/pips-workshop-countdown.jpg" },
 ];
 
 // Langue déduite de l'URL (/en/ = anglais, tout le reste = français) plutôt
